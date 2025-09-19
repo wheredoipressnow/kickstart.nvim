@@ -902,14 +902,15 @@ require('lazy').setup({
   -- },
   --
   {
-    'blazkowolf/gruber-darker.nvim',
+    'ellisonleao/gruvbox.nvim',
     config = function()
       -- Optionally configure and load the colorscheme
       -- directly inside the plugin declaration.
       vim.g.everforest_enable_italic = true
-      vim.cmd.colorscheme 'gruber-darker'
+      vim.cmd.colorscheme 'gruvbox'
     end,
   },
+  { 'blazkowolf/gruber-darker.nvim' },
   {
     'sainnhe/everforest',
     lazy = false,
