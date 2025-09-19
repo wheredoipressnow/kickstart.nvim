@@ -102,7 +102,7 @@ vim.g.have_nerd_font = true
 vim.o.number = true
 -- You can also add relative line numbers, to help with jumping.
 --  Experiment for yourself to see if you like it!
--- vim.o.relativenumber = true
+vim.o.relativenumber = true
 
 -- Enable mouse mode, can be useful for resizing splits for example!
 vim.o.mouse = 'a'
@@ -902,15 +902,24 @@ require('lazy').setup({
   -- },
   --
   {
-    'sainnhe/everforest',
-    lazy = false,
-    priority = 1000,
+    'blazkowolf/gruber-darker.nvim',
     config = function()
       -- Optionally configure and load the colorscheme
       -- directly inside the plugin declaration.
       vim.g.everforest_enable_italic = true
-      vim.cmd.colorscheme 'everforest'
+      vim.cmd.colorscheme 'gruber-darker'
     end,
+  },
+  {
+    'sainnhe/everforest',
+    lazy = false,
+    priority = 1000,
+    -- config = function()
+    --   -- Optionally configure and load the colorscheme
+    --   -- directly inside the plugin declaration.
+    --   vim.g.everforest_enable_italic = true
+    --   vim.cmd.colorscheme 'everforest'
+    -- end,
   },
   -- Highlight todo, notes, etc in comments
   { 'folke/todo-comments.nvim', event = 'VimEnter', dependencies = { 'nvim-lua/plenary.nvim' }, opts = { signs = false } },
