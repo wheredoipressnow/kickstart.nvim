@@ -255,6 +255,14 @@ rtp:prepend(lazypath)
 --
 -- NOTE: Here is where you install your plugins.
 require('lazy').setup({
+  {
+    'folke/flash.nvim',
+    keys = {
+      { 's', function() require('flash').jump() end, mode = { 'n', 'x', 'o' } },
+      { 'S', function() require('flash').treesitter() end, mode = { 'n', 'x', 'o' } },
+    },
+  },
+
   -- NOTE: Plugins can be added via a link or github org/name. To run setup automatically, use `opts = {}`
   { 'NMAC427/guess-indent.nvim', opts = {} },
 
@@ -600,9 +608,7 @@ require('lazy').setup({
       --  See `:help lsp-config` for information about keys and how to configure
       ---@type table<string, vim.lsp.Config>
       local servers = {
-        elixirls = {
-          cmd = { 'c:/tools/elixir-ls/language_server.bat' },
-        },
+        elixirls = {},
         -- clangd = {},
         -- gopls = {},
         -- pyright = {},
