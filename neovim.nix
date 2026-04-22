@@ -63,6 +63,17 @@
         p.elixir
         p.haskell
         p.nix
+        p.heex
+        p.kotlin
+        p.gitignore
+        p.yaml
+        p.json
+        p.toml
+        p.xml
+        p.typescript
+        p.javascript
+        p.css
+        p.scss
         # Add more as needed:
         #  p.python p.rust
       ]))
